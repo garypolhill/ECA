@@ -254,7 +254,7 @@ end
 
 to-report patch-substring-counts [ N ]
   let remaining patch-string
-  set remaining (word remaining substring remaining 0 N)
+  set remaining (word remaining substring remaining 0 (N - 1))
 
   let t table:make
   while [ length remaining >= N ] [
